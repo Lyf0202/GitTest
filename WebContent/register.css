@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+h1 {
+	text-align:center;
+}
+hr {
+	width:50%;
+}
+td.textRight {
+	font-weight:bold;
+	text-align:right;
+}
+table {
+	margin:0 auto;
+}

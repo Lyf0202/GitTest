@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>任务一</title>
+<script type="text/javascript" lang="javascript">
+	var newWin;
+	function openNewWin(){
+		newwin=open("register.html","myWindow", 
+				"height=1000,width=600,top=10,left=0,toolbar=no,menubar=no," 
+				+ "scrollbars=no,resizable=no,location=no,status=no");
+	}
+	
+	function closeNewWin(){
+		newWin.close();
+	}
+	function close(){
+		window.opener=null;
+		window.open("","_self");
+		window.close();
+	}
+	function loc(url){
+		window.location.href = url;
+	}
+	var c = 0;
+	var t;
+	function startCount() {
+		document.getElementById('txt').value=c; 
+		c=c+1; 
+		document.getElementById('start').disabled = true;
+		document.getElementById('stop').disabled = false;
+		t=setTimeout("startCount()",1000);
+	}
+	function stopCount() {
+		document.getElementById('start').disabled = false;
+		document.getElementById('stop').disabled = true;
+		c=0; 
+		document.getElementById('txt').value=0; 
+		clearTimeout(t);
+	}
+</script>
+</head>
+<body>
+	<a href="javascript:openNewWin()" >打开新窗口</a><br>
+	<a href="javascript:closeNewWin()">关闭新窗口</a><br>
+	<a href="javascript:close()">关闭本窗口</a><br>
+	<input type="button" onclick="loc('register.html')" value="跳转到注册页面"><br>
+	<input type="button" value="开始计时！" onclick="startCount()" id="start"> 
+	<input type="text" id="txt"> 
+	<input type="button" value="停止计时！" onclick="stopCount()" id="stop"> 
+	
+
+</body>
+</html>

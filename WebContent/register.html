@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户注册</title>
+<link href="register.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" lang="javascript" src="register.js"></script>
+</head>
+
+<body>
+	<h1>用户注册</h1>
+	<hr />
+	<form name="" method="post" onsubmit="return formSubmit()">
+		<table>
+			<tr>
+				<td class="textRight">用户名:</td>
+				<td><input type="text" name="username" id="id_username" /></td>
+			</tr>
+			<tr>
+				<td class="textRight">密码:</td>
+				<td><input type="password" name="password" id="id_password" /></td>
+			</tr>
+			<tr>
+				<td class="textRight">重复密码:</td>
+				<td><input type="password" name="repassword" id="id_repassword" /></td>
+			</tr>
+			<tr>
+				<td class="textRight">性别:</td>
+				<td><input name="sex" type="radio" value="1" />男
+					<input type="radio" name="sex" value="0" />女</td>
+			</tr>
+			<tr>
+				<td class="textRight">年龄:</td>
+				<td><input type="text" name="age" id="id_age" /></td>
+			</tr>
+			<tr>
+				<td class="textRight">学历:</td>
+				<td><select name="degree" id="id_degree">
+						<option value="">--请选择--</option>
+						<option value="1">专科</option>
+						<option value="2">本科</option>
+						<option value="3">硕士</option>
+						<option value="4">博士</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td class="textRight">爱好:</td>
+				<td><input type="checkbox" name="hobby" value="1" />睡觉 <input
+					type="checkbox" name="hobby" value="2" />逃课 <input type="checkbox"
+					name="hobby" value="3" />打游戏 <input type="checkbox" name="hobby"
+					value="4" />吃饭</td>
+			</tr>
+			<tr>
+				<td class="textRight">自我介绍:</td>
+				<td><textarea name="introduce" id="id_introduce" rows="5" cols="30">自我介绍:</textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="提交" />&nbsp;&nbsp;<input
+					type="reset" value="重置" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
